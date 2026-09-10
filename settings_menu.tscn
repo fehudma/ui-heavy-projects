@@ -37,20 +37,47 @@ horizontal_alignment = 1
 [node name="SettingsTabs" type="TabContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer" unique_id=745006432]
 layout_mode = 2
 size_flags_vertical = 3
-current_tab = 1
+current_tab = 0
 script = ExtResource("1_ufg0w")
 
 [node name="Video" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" unique_id=1558746807]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 12
 metadata/_tab_index = 0
 
-[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video" unique_id=840932742]
+[node name="VideoGrid" type="GridContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video" unique_id=62666310]
 layout_mode = 2
-text = "Video settings"
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="FullscreenLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video/VideoGrid" unique_id=840932742]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="FullscreenToggle" type="CheckButton" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video/VideoGrid" unique_id=1118904275]
+layout_mode = 2
+
+[node name="ResolutionLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video/VideoGrid" unique_id=840533008]
+layout_mode = 2
+text = "Resolution"
+
+[node name="ResolutionDropdown" type="OptionButton" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Video/VideoGrid" unique_id=311841753]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 2
+item_count = 4
+popup/item_0/text = "1280 × 720"
+popup/item_0/id = 0
+popup/item_1/text = "1600 × 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920 × 1080"
+popup/item_2/id = 2
+popup/item_3/text = "2560 × 1440"
+popup/item_3/id = 3
 
 [node name="Audio" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" unique_id=875060438]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 12
 metadata/_tab_index = 1
