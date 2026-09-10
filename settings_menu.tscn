@@ -163,9 +163,42 @@ layout_mode = 2
 theme_override_constants/separation = 12
 metadata/_tab_index = 3
 
-[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls" unique_id=770310251]
+[node name="ControlsHint" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls" unique_id=50660036]
 layout_mode = 2
-text = "Control settings"
+text = "Select a binding, then press a key."
+
+[node name="BindingsGrid" type="GridContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls" unique_id=1100011756]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="InteractLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1735700366]
+layout_mode = 2
+text = "Interact"
+
+[node name="InteractBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1878035042]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "E"
+
+[node name="InventoryLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1414387863]
+layout_mode = 2
+text = "Open Inventory"
+
+[node name="InventoryBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=189281376]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I"
+
+[node name="PauseLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=419010092]
+layout_mode = 2
+text = "Pause"
+
+[node name="PauseBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1841200791]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Escape"
 
 [node name="ActionBar" type="HBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1506327898]
 layout_mode = 2
