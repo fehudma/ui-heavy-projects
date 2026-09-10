@@ -31,3 +31,37 @@ theme_override_constants/separation = 16
 layout_mode = 2
 text = "Settings"
 horizontal_alignment = 1
+
+[node name="SettingsTab" type="TabContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer" unique_id=745006432]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Video" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab" unique_id=1558746807]
+layout_mode = 2
+theme_override_constants/separation = 12
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab/Video" unique_id=840932742]
+layout_mode = 2
+text = "Video settings"
+
+[node name="Audio" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab" unique_id=875060438]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 12
+metadata/_tab_index = 1
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab/Audio" unique_id=1013324362]
+layout_mode = 2
+text = "Audio settings"
+
+[node name="Controls" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab" unique_id=521957048]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 12
+metadata/_tab_index = 2
+
+[node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTab/Controls" unique_id=770310251]
+layout_mode = 2
+text = "Control settings"
