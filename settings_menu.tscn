@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://st5qbq0uhrra"]
 
+[ext_resource type="Script" uid="uid://cj7lepeq7pjk1" path="res://settings_menu.gd" id="1_ufg0w"]
+
 [node name="SettingsMenu" type="Control" unique_id=1116121944]
 layout_mode = 3
 anchors_preset = 15
@@ -36,6 +38,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 current_tab = 1
+script = ExtResource("1_ufg0w")
 
 [node name="Video" type="VBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" unique_id=1558746807]
 visible = false
@@ -106,3 +109,5 @@ metadata/_tab_index = 2
 [node name="Label" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls" unique_id=770310251]
 layout_mode = 2
 text = "Control settings"
+
+[connection signal="value_changed" from="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Audio/AudioGrid/MasterSlider" to="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" method="_on_master_slider_value_changed"]
