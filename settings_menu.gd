@@ -34,22 +34,8 @@ var applied_settings: Dictionary = {}
 	$Controls/BindingsGrid/InventoryBindingButton
 @onready var pause_binding_button: Button = \
 	$Controls/BindingsGrid/PauseBindingButton
-#=======================================???
 
 #=======================================HELPER
-func _store_current_settings() -> void:
-	applied_settings = {
-		"master_volume": master_slider.value,
-		"music_volume": music_slider.value,
-		"sfx_volume": sfx_slider.value,
-		"fullscreen": fullscreen_toggle.button_pressed,
-		"resolution": resolution_dropdown.selected,
-		"language": language_dropdown.selected,
-		"interact_key": interact_binding_button.text,
-		"inventory_key": inventory_binding_button.text,
-		"pause_key": pause_binding_button.text,
-	}
-
 func _input(event: InputEvent) -> void:
 	if not event is InputEventKey:
 		return
@@ -70,6 +56,40 @@ func _input(event: InputEvent) -> void:
 
 func _format_percentage(value: float) -> String:
 	return str(int(value)) + "%"
+
+func _store_current_settings() -> void:
+	applied_settings = {
+		"master_volume": master_slider.value,
+		"music_volume": music_slider.value,
+		"sfx_volume": sfx_slider.value,
+		"fullscreen": fullscreen_toggle.button_pressed,
+		"resolution": resolution_dropdown.selected,
+		"language": language_dropdown.selected,
+		"interact_key": interact_binding_button.text,
+		"inventory_key": inventory_binding_button.text,
+		"pause_key": pause_binding_button.text,
+	}
+
+func _restore_applied_settings() -> void:
+	master_slider.value = float(applied_settings["master_volume"])
+	music_slider.value = float(applied_settings["music_volume"])
+	sfx_slider.value = float(applied_settings["sfx_volume"])
+
+	fullscreen_toggle.button_pressed = bool(applied_settings["fullscreen"])
+	resolution_dropdown.select(int(applied_settings["resolution"]))
+	language_dropdown.select(int(applied_settings["language"]))
+
+	interact_binding_button.text = str(applied_settings["interact_key"])
+	inventory_binding_button.text = str(applied_settings["inventory_key"])
+	pause_binding_button.text = str(applied_settings["pause_key"])
+
+	var active_button := binding_group.get_pressed_button()
+
+	if active_button != null:
+		active_button.button_pressed = false
+
+#=======================================???
+
 
 #=======================================READY
 func _ready() -> void:
@@ -106,3 +126,7 @@ func _on_reset_button_pressed() -> void:
 func _on_apply_button_pressed() -> void:
 	_store_current_settings()
 	print("Applied settings: ", applied_settings)
+
+
+func _on_cancel_button_pressed() -> void:
+	_restore_applied_settings()
