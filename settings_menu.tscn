@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cj7lepeq7pjk1" path="res://settings_menu.gd" id="1_ufg0w"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_njpdg"]
+allow_unpress = true
+
 [node name="SettingsMenu" type="Control" unique_id=1116121944]
 layout_mode = 3
 anchors_preset = 15
@@ -180,6 +183,8 @@ text = "Interact"
 [node name="InteractBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1878035042]
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njpdg")
 text = "E"
 
 [node name="InventoryLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1414387863]
@@ -189,6 +194,8 @@ text = "Open Inventory"
 [node name="InventoryBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=189281376]
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njpdg")
 text = "I"
 
 [node name="PauseLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=419010092]
@@ -198,6 +205,8 @@ text = "Pause"
 [node name="PauseBindingButton" type="Button" parent="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Controls/BindingsGrid" unique_id=1841200791]
 layout_mode = 2
 size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("ButtonGroup_njpdg")
 text = "Escape"
 
 [node name="ActionBar" type="HBoxContainer" parent="BackgroundPanel/MarginContainer/VBoxContainer" unique_id=1506327898]
