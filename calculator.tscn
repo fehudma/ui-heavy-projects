@@ -21,3 +21,94 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1637413992]
 layout_mode = 2
+
+[node name="Display" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=530946813]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ButtonGrid" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1244236304]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 4
+
+[node name="ClearButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2083195794]
+layout_mode = 2
+text = "C"
+
+[node name="SignButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=512639268]
+layout_mode = 2
+text = "±"
+
+[node name="PercentButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=582446488]
+layout_mode = 2
+text = "%"
+
+[node name="DivideButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=251741779]
+layout_mode = 2
+text = "÷"
+
+[node name="Button7" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1863314334]
+layout_mode = 2
+text = "7"
+
+[node name="Button8" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=973606582]
+layout_mode = 2
+text = "8"
+
+[node name="Button9" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=66729512]
+layout_mode = 2
+text = "9"
+
+[node name="MultiplyButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1912823448]
+layout_mode = 2
+text = "×"
+
+[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1789238843]
+layout_mode = 2
+text = "4"
+
+[node name="Button5" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=590139460]
+layout_mode = 2
+text = "5"
+
+[node name="Button6" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2024067787]
+layout_mode = 2
+text = "6"
+
+[node name="SubtractButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1462327214]
+layout_mode = 2
+text = "−"
+
+[node name="Button1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=862147343]
+layout_mode = 2
+text = "1"
+
+[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1441315433]
+layout_mode = 2
+text = "2"
+
+[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=284243153]
+layout_mode = 2
+text = "3"
+
+[node name="AddButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=752098580]
+layout_mode = 2
+text = "+"
+
+[node name="Spacer" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1461320886]
+layout_mode = 2
+
+[node name="Button0" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2000357435]
+layout_mode = 2
+text = "0"
+
+[node name="DecimalButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1858996886]
+layout_mode = 2
+text = "."
+
+[node name="EqualsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1646916769]
+layout_mode = 2
+text = "="
