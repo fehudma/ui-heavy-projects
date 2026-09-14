@@ -233,3 +233,4 @@ text = "Apply"
 [connection signal="value_changed" from="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Audio/AudioGrid/MusicSlider" to="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs/Audio/AudioGrid/SFXSlider" to="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" method="_on_sfx_slider_value_changed"]
 [connection signal="pressed" from="BackgroundPanel/MarginContainer/VBoxContainer/ActionBar/ResetButton" to="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="BackgroundPanel/MarginContainer/VBoxContainer/ActionBar/ApplyButton" to="BackgroundPanel/MarginContainer/VBoxContainer/SettingsTabs" method="_on_apply_button_pressed"]

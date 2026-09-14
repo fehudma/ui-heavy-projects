@@ -9,7 +9,7 @@ const DEFAULT_INTERACT_KEY: String = "E"
 const DEFAULT_INVENTORY_KEY: String = "I"
 const DEFAULT_PAUSE_KEY: String = "Escape"
 #=======================================VAR
-
+var applied_settings: Dictionary = {}
 #=======================================ONREADY
 @onready var master_value_label: Label = $Audio/AudioGrid/MasterValueLabel
 @onready var music_value_label: Label = $Audio/AudioGrid/MusicValueLabel
@@ -35,6 +35,21 @@ const DEFAULT_PAUSE_KEY: String = "Escape"
 @onready var pause_binding_button: Button = \
 	$Controls/BindingsGrid/PauseBindingButton
 #=======================================???
+
+#=======================================HELPER
+func _store_current_settings() -> void:
+	applied_settings = {
+		"master_volume": master_slider.value,
+		"music_volume": music_slider.value,
+		"sfx_volume": sfx_slider.value,
+		"fullscreen": fullscreen_toggle.button_pressed,
+		"resolution": resolution_dropdown.selected,
+		"language": language_dropdown.selected,
+		"interact_key": interact_binding_button.text,
+		"inventory_key": inventory_binding_button.text,
+		"pause_key": pause_binding_button.text,
+	}
+
 func _input(event: InputEvent) -> void:
 	if not event is InputEventKey:
 		return
@@ -56,6 +71,11 @@ func _input(event: InputEvent) -> void:
 func _format_percentage(value: float) -> String:
 	return str(int(value)) + "%"
 
+#=======================================READY
+func _ready() -> void:
+	_store_current_settings()
+
+#=======================================SIGNAL
 func _on_master_slider_value_changed(value: float) -> void:
 	master_value_label.text = _format_percentage(value)
 
@@ -82,3 +102,7 @@ func _on_reset_button_pressed() -> void:
 
 	if active_button != null:
 		active_button.button_pressed = false
+
+func _on_apply_button_pressed() -> void:
+	_store_current_settings()
+	print("Applied settings: ", applied_settings)
