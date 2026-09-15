@@ -1,8 +1,9 @@
 extends Control
 
 #===============================ONREADY
-@onready var display: Label = $PanelContainer/MarginContainer/VBoxContainer/Display
+@onready var display: Label = $PanelContainer/MarginContainer/VBoxContainer/DisplayPanel/Display
 @onready var button_grid: GridContainer = $PanelContainer/MarginContainer/VBoxContainer/ButtonGrid
+
 
 #===============================VAR
 var first_operand: float = 0.0
