@@ -5,15 +5,19 @@
 [sub_resource type="Theme" id="Theme_kvxsv"]
 default_font_size = 24
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ea7ax"]
+bg_color = Color(0.105882354, 0.11764706, 0.16470589, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6v3vq"]
+bg_color = Color(0.07284262, 0.072842635, 0.072842576, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-expand_margin_left = 3.0
-expand_margin_top = 3.0
-expand_margin_right = 3.0
-expand_margin_bottom = 3.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s7sf"]
 bg_color = Color(0.7490196, 0.38039216, 0.41568628, 1)
@@ -368,6 +372,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ea7ax")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=308470182]
 layout_mode = 2
@@ -400,6 +405,7 @@ theme_override_constants/v_separation = 8
 columns = 4
 
 [node name="ClearButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2083195794]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_8s7sf")
@@ -408,6 +414,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_n86kn")
 text = "C"
 
 [node name="SignButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=512639268]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_5fm7i")
@@ -416,6 +423,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cgfmh")
 text = "±"
 
 [node name="PercentButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=582446488]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_n8v26")
@@ -424,6 +432,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wqfqp")
 text = "%"
 
 [node name="DivideButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=251741779]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
@@ -432,6 +441,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "÷"
 
 [node name="Button7" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1863314334]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2ur1s")
@@ -440,6 +450,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_xbgcs")
 text = "7"
 
 [node name="Button8" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=973606582]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_4lgyd")
@@ -448,6 +459,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_r0ob0")
 text = "8"
 
 [node name="Button9" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=66729512]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_dgtq8")
@@ -456,6 +468,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_mrkyl")
 text = "9"
 
 [node name="MultiplyButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1912823448]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
@@ -464,6 +477,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "×"
 
 [node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1789238843]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_0urne")
@@ -472,6 +486,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_mni8m")
 text = "4"
 
 [node name="Button5" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=590139460]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab05p")
@@ -480,6 +495,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_86ujb")
 text = "5"
 
 [node name="Button6" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2024067787]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_rd4o7")
@@ -488,6 +504,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_v6pmv")
 text = "6"
 
 [node name="SubtractButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1462327214]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
@@ -496,6 +513,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "−"
 
 [node name="Button1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=862147343]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_goxaq")
@@ -504,6 +522,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_tagju")
 text = "1"
 
 [node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1441315433]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_khrkl")
@@ -512,6 +531,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_twq0k")
 text = "2"
 
 [node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=284243153]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_s1em7")
@@ -520,6 +540,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_53rid")
 text = "3"
 
 [node name="AddButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=752098580]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
@@ -531,6 +552,7 @@ text = "+"
 layout_mode = 2
 
 [node name="Button0" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2000357435]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_b6x0h")
@@ -539,6 +561,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cjcid")
 text = "0"
 
 [node name="DecimalButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1858996886]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9254902, 0.9372549, 0.95686275, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhfnq")
@@ -547,6 +570,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_l6w8i")
 text = "."
 
 [node name="EqualsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1646916769]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_2r0k0")

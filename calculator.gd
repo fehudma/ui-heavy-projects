@@ -27,6 +27,35 @@ func format_number(value: float) -> String:
 		return str(int(value))
 
 	return str(value)
+#===============================OTHER
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo:
+		var typed_character: String = char(event.unicode)
+
+		if typed_character.length() == 1 and typed_character.is_valid_int():
+			append_digit(typed_character)
+			return
+
+		if typed_character == ".":
+			_on_decimal_button_pressed()
+			return
+		elif typed_character.to_lower() == "c":
+			_on_clear_button_pressed()
+			return
+
+		if event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER or typed_character == "=":
+			_on_equals_button_pressed()
+			return
+
+		match typed_character:
+			"+":
+				select_operation("+")
+			"-":
+				select_operation("-")
+			"*":
+				select_operation("*")
+			"/":
+				select_operation("/")
 #===============================SIGNAL
 func _on_clear_button_pressed() -> void:
 	display.text = "0"
