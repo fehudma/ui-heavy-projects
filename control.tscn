@@ -15,6 +15,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2032948269]
 layout_mode = 2
@@ -26,6 +30,7 @@ text = "QUESTION 1 / 10"
 [node name="QuestionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1118608057]
 layout_mode = 2
 text = "What is 2 + 2?"
+autowrap_mode = 2
 
 [node name="AnswersContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1289676641]
 layout_mode = 2
@@ -51,6 +56,7 @@ layout_mode = 2
 
 [node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterContainer" unique_id=1416725044]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Score: 0"
 
 [node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterContainer" unique_id=358579639]
