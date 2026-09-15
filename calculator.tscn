@@ -6,20 +6,41 @@
 default_font_size = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvxsv"]
-bg_color = Color(0.42716533, 0.57140917, 1, 1)
+bg_color = Color(0.9607843, 0.40392157, 0, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quc1l"]
-bg_color = Color(0.1779255, 0.20814347, 1, 1)
+bg_color = Color(0.8278728, 0.3438734, 7.70092e-07, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfhry"]
+bg_color = Color(1, 0.7234598, 0.59861994, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2r0k0"]
+bg_color = Color(0.42716533, 0.57140917, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k7ndo"]
+bg_color = Color(0.1779255, 0.20814347, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrjcc"]
 bg_color = Color(0.7020114, 0.770572, 0.9963029, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
@@ -83,6 +104,10 @@ text = "%"
 
 [node name="DivideButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=251741779]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "÷"
 
 [node name="Button7" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1863314334]
@@ -99,6 +124,10 @@ text = "9"
 
 [node name="MultiplyButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1912823448]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "×"
 
 [node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1789238843]
@@ -115,6 +144,10 @@ text = "6"
 
 [node name="SubtractButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1462327214]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "−"
 
 [node name="Button1" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=862147343]
@@ -131,6 +164,10 @@ text = "3"
 
 [node name="AddButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=752098580]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0.2833333, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "+"
 
 [node name="Spacer" type="Control" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1461320886]
@@ -147,9 +184,9 @@ text = "."
 [node name="EqualsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1646916769]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2r0k0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_k7ndo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qrjcc")
 text = "="
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid/ClearButton" to="." method="_on_clear_button_pressed"]
