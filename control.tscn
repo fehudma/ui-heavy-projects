@@ -7,3 +7,52 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1014883485]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2032948269]
+layout_mode = 2
+
+[node name="ProgressLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2039315431]
+layout_mode = 2
+text = "QUESTION 1 / 10"
+
+[node name="QuestionLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1118608057]
+layout_mode = 2
+text = "What is 2 + 2?"
+
+[node name="AnswersContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1289676641]
+layout_mode = 2
+
+[node name="AnswerButton1" type="Button" parent="MarginContainer/VBoxContainer/AnswersContainer" unique_id=1648768324]
+layout_mode = 2
+text = "3"
+
+[node name="AnswerButton2" type="Button" parent="MarginContainer/VBoxContainer/AnswersContainer" unique_id=2081787081]
+layout_mode = 2
+text = "4"
+
+[node name="AnswerButton3" type="Button" parent="MarginContainer/VBoxContainer/AnswersContainer" unique_id=1311759129]
+layout_mode = 2
+text = "5"
+
+[node name="AnswerButton4" type="Button" parent="MarginContainer/VBoxContainer/AnswersContainer" unique_id=1447407197]
+layout_mode = 2
+text = "6"
+
+[node name="FooterContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=549539499]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterContainer" unique_id=1416725044]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer/FooterContainer" unique_id=358579639]
+layout_mode = 2
+text = "Time: 15"
