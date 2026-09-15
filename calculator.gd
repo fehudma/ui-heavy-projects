@@ -17,7 +17,10 @@ func _on_clear_button_pressed() -> void:
 
 
 func _on_sign_button_pressed() -> void:
-	pass # Replace with function body.
+	if display.text.begins_with("-"):
+		display.text = display.text.trim_prefix("-")
+	elif display.text != "0":
+		display.text = "-" + display.text
 
 
 func _on_percent_button_pressed() -> void:
