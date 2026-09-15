@@ -2,6 +2,30 @@
 
 [ext_resource type="Script" uid="uid://d2k7b750wi4e2" path="res://calculator.gd" id="1_kvxsv"]
 
+[sub_resource type="Theme" id="Theme_kvxsv"]
+default_font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvxsv"]
+bg_color = Color(0.42716533, 0.57140917, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quc1l"]
+bg_color = Color(0.1779255, 0.20814347, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfhry"]
+bg_color = Color(0.7020114, 0.770572, 0.9963029, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Calculator" type="Control" unique_id=1137005431]
 layout_mode = 3
 anchors_preset = 15
@@ -9,6 +33,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_kvxsv")
 script = ExtResource("1_kvxsv")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1358188172]
@@ -21,6 +46,10 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=308470182]
 layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1637413992]
 layout_mode = 2
@@ -28,6 +57,7 @@ layout_mode = 2
 [node name="Display" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=530946813]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+theme_override_font_sizes/font_size = 36
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
@@ -35,6 +65,8 @@ vertical_alignment = 1
 [node name="ButtonGrid" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1244236304]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
 columns = 4
 
 [node name="ClearButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=2083195794]
@@ -114,6 +146,10 @@ text = "."
 
 [node name="EqualsButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid" unique_id=1646916769]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_kvxsv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_quc1l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wfhry")
 text = "="
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ButtonGrid/ClearButton" to="." method="_on_clear_button_pressed"]
